@@ -1,0 +1,42 @@
+
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: A demo AWS Lambda function that will detect faces in an image and add unicorn horn overlays
+
+Resources:
+  CV2Layer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: "cv2-layer"
+      Description: "Open CV2 real-time computer vision Library"
+      CompatibleRuntimes:
+        - python3.7
+      CompatibleArchitectures: 
+        - x86_64
+      ContentUri: cv2/
+      LicenseInfo: "Available under the Apache license."
+      RetentionPolicy: Delete
+
+  AppFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: i-want-to-be-a-unicorn-function
+      CodeUri: i-want-to-be-a-unicorn-app/
+      Handler: app.lambda_handler
+      Runtime: python3.7
+      Description: Detect faces in an image and add unicorn horn overlays
+      MemorySize: 512
+      Timeout: 15
+      Layers:
+        - !Ref CV2Layer
+      Policies:
+        - AmazonS3FullAccess
+      Events:
+        CreateUnicornEvent:
+          Type: S3
+          Properties:
+            Bucket: !Ref Source
+            Events: s3:ObjectCreated:*
+
+  Source:
+    Type: AWS::S3::Bucket
