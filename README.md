@@ -113,7 +113,17 @@ TODO
 ![Source Bucket](screenshots/3e.png)
 ![Source Bucket](screenshots/4e.png)
 
+<br><br>
+# Cleanup
 
+1. Empty the S3 buckets
+<br>
+2. Copy and paste the commands into CloudShell
+
+```Shell
+cd i-want-to-be-a-unicorn
+sam delete
+```
 
 ---
 
