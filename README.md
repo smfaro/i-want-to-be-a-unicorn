@@ -1,6 +1,6 @@
-# i-want-to-be-a-unicorn Demo App
+# I Want To Be A Unicorn Demo App
 
-# Description
+
 This solution demonstrates the use of AWS S3 events and AWS Lambda to provide a serverless image processor. Users upload images to a source S3 bucket, an event will trigger a Lambda function that uses the OpenCV2 library to detect human faces in the image and overlay a unicorn horn to the faces. The created image is saved to a destination S3 bucket.
 <br><br>
 
@@ -16,7 +16,7 @@ This solution demonstrates the use of AWS S3 events and AWS Lambda to provide a 
 ![AWS Region](screenshots/1a.png)
 
 <br><br>
-## Create Source Bucket
+## Create Destination Bucket
 <br>
 1. Use the search bar to find and load 'S3'
 
@@ -41,6 +41,8 @@ This solution demonstrates the use of AWS S3 events and AWS Lambda to provide a 
 
 <br><br>
 ## Deploy Serverless Function
+
+Using a prepared AWS Serverless Application Model (SAM) template we will automate the provisioning of the source bucket and Lambda function
 
 <br>
 1. Use the search bar to find and load 'CloudShell'
@@ -80,8 +82,9 @@ sam build && sam deploy --guided
 
 <br><br>
 ## Validate Deployment
+TODO
 
-
+<br><br>
 ## Test Application
 
 1. Use the search bar to find and load 'S3'
