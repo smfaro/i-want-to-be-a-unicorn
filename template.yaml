@@ -26,7 +26,7 @@ Resources:
       Runtime: python3.7
       Description: Detect faces in an image and add unicorn horn overlays
       MemorySize: 512
-      Timeout: 15
+      Timeout: 45
       Layers:
         - !Ref CV2Layer
       Policies:

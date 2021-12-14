@@ -35,7 +35,7 @@ def lambda_handler(event, context):
 
     # Get the haarcascade face data & unicorn horn img
     haarcascade_face_data_filename = os.environ['LAMBDA_TASK_ROOT'] + '/resources/haarcascade_frontalface_alt.xml'
-    unicorn_horn_filename = os.environ['LAMBDA_TASK_ROOT'] + '/resources/unicorn.png'
+    unicorn_horn_filename = os.environ['LAMBDA_TASK_ROOT'] + '/resources/santa.png'
 
     # Detect faces in source image
     img = cv2.imread(tmp_filename)
@@ -64,6 +64,7 @@ def lambda_handler(event, context):
     # Save the updated image to destination bucket
     s3 = boto3.client('s3')
     s3.upload_file(tmp_filename, destination_bucket, 'unicorn_' + source_key)
+    logger.info("image saved to s3://" + destination_bucket + "/unicorn_" + source_key,)
 
     return {
         "statusCode": 200,
