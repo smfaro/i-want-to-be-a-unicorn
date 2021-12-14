@@ -137,8 +137,10 @@ cd i-want-to-be-a-unicorn
 sam delete
 ```
 
----
+<br><br>
 # Lambda Test Event json
+
+You can test the function from the Lambda console using the test event json here. Be sure to update with your source bucket name and filename.
 
 ```json
 {  
@@ -146,10 +148,10 @@ sam delete
       {  
          "s3":{  
             "bucket":{  
-               "name":"i-want-to-be-a-unicorn-source-1l4jwp15vka8x"
+               "name":"i-want-to-be-a-unicorn-source-****************"
             },
             "object":{  
-               "key":"16469284-0-image-a-159_1564014636864.jpg"
+               "key":"yourfile.png"
             }
          }
       }
@@ -157,8 +159,7 @@ sam delete
 }
 ```
 
----
-
+<br><br>
 # Under the hood
 
 This app used the OpenCV2 library. This is obtained from https://github.com/awslabs/lambda-opencv
