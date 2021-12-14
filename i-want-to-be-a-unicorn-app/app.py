@@ -8,7 +8,7 @@ import cv2
 
 def lambda_handler(event, context):
     logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
     logger.debug('event parameter: {}'.format(event))
 
     s3 = boto3.resource('s3')
