@@ -97,7 +97,14 @@ TODO
 ![Source Bucket](screenshots/1e.png)
 
 <br>
-3. Click Upload and Add files or drag images into the dotted section. The picture must be clear, containing human faces.
+3. Click Upload and Add files or drag images into the dotted section. The picture must be clear and contain human faces without dark sun glasses. Your PhoneTool picture is normally a good option. 
+<br>
+
+[PhoneTool](https://phonetool.amazon.com)
+<br>
+
+[PhoneTool Image](https://internal-cdn.amazon.com/badgephotos.amazon.com/?fullsize=1&uid=)
+
 
 ![Source Bucket](screenshots/2e.png)
 
