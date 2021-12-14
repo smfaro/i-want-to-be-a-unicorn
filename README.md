@@ -118,7 +118,12 @@ TODO
 6. Open the modified image
 
 ![Source Bucket](screenshots/3e.png)
+
 ![Source Bucket](screenshots/4e.png)
+
+<br><br>
+# Challenge
+Included in the lambda function package is a santa hat. Modify the function code to create festive pictures, redeploy function from the Lambda console and test.
 
 <br><br>
 # Cleanup
@@ -133,7 +138,26 @@ sam delete
 ```
 
 ---
+# Lambda Test Event json
 
+```json
+{  
+   "Records":[  
+      {  
+         "s3":{  
+            "bucket":{  
+               "name":"i-want-to-be-a-unicorn-source-1l4jwp15vka8x"
+            },
+            "object":{  
+               "key":"16469284-0-image-a-159_1564014636864.jpg"
+            }
+         }
+      }
+   ]
+}
+```
+
+---
 
 # Under the hood
 

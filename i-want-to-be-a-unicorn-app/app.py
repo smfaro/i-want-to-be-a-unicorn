@@ -35,7 +35,7 @@ def lambda_handler(event, context):
 
     # Get the haarcascade face data & unicorn horn img
     haarcascade_face_data_filename = os.environ['LAMBDA_TASK_ROOT'] + '/resources/haarcascade_frontalface_alt.xml'
-    unicorn_horn_filename = os.environ['LAMBDA_TASK_ROOT'] + '/resources/santa.png'
+    unicorn_horn_filename = os.environ['LAMBDA_TASK_ROOT'] + '/resources/unicorn.png'
 
     # Detect faces in source image
     img = cv2.imread(tmp_filename)
